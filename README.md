@@ -14,13 +14,22 @@
 >
 
 ## 📖 Introduction
-This is the official code for Time-Aware World Model (TAWM), a model-agnostic and more efficient training method for world model. <br>
 
-**TL;DR:** Time-Aware World Model (TAWM) is a model-agnostic training method that improves dynamics learning by explicitly incorporating time step size Δt and sampling observations at varying frequencies. This addresses the real-world constraint of varying observation rates, enabling efficient learning across temporal scales and outperforming fixed-Δt baselines under the same training budget.
+This is the official code for **Time-Aware World Model (TAWM)**, a model-agnostic and more efficient training method for world models.
 
-<br><br>
+#### 🎯 TL;DR
 
-Since TAWM's core contribution is the **time-aware concepts and training method**, which is ***architecture-agnostic***, it can be seemlessly incorporated into any world model training pipeline, including but not limited to TD-MPC2 and Dreamers. In this work, TAWM is built on top of TD-MPC2 architecture as the basis of the experiments. <br><br>
+Time-Aware World Model (TAWM) is a model-agnostic training method that improves dynamics learning by explicitly incorporating time step size **Δt** and sampling observations at varying frequencies. This addresses the real-world constraint of varying observation rates, enabling efficient learning across temporal scales and outperforming fixed-Δt baselines under the same training budget.
+
+---
+
+#### 🔧 Architecture-Agnostic Design
+
+Since TAWM's core contribution is the **time-aware concepts and training method**, which is ***architecture-agnostic***, it can be seamlessly incorporated into any world model training pipeline, including but not limited to **TD-MPC2** and **Dreamers**. In this work, TAWM is built on top of the **TD-MPC2 architecture** as the basis for the experiments.
+
+---
+
+#### 💡 Time-Aware Incorporation
 
 You can directly incorporate the Time-Aware concept into your world model training pipeline ***even without using our code***. To incorporate **TAWM** into any world model architecture:
 
