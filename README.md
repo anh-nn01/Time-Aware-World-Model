@@ -1,8 +1,9 @@
 <p align="center">
-   <h1 align="center">Time-Aware World Model</h1>
-   <h3 align="center"><a href="https://arxiv.org/abs/2506.08441">Paper</a> | 
-   <a href="">Poster</a> (to be updated) | 
-   <a href="">Videos</a> (to be updated) </h3>
+   <h1 align="center">⏱️ Time-Aware World Model 🌎</h1>
+   <h3 align="center"><a href="https://arxiv.org/abs/2506.08441">🎓 Paper</a> | 
+   <a href="https://icml.cc/media/PosterPDFs/ICML%202025/44469.png?t=1752596515.1086242">📌 Poster</a> | 
+   <a href="https://anh-nn01.github.io/time-aware-world-models/">🌐 Website</a> |
+   <a href="https://icml.cc/virtual/2025/poster/44469">🎬 Videos</a></h3>
 </p>
 
 > [**Time-Aware World Model for Adaptive Prediction and Control**](https://arxiv.org/abs/2506.08441)  <br>
@@ -12,10 +13,14 @@
 > International Conference on Machine Learning (ICML) 2025 <br>
 >
 
-## Introduction
-This is the code for Time-Aware World Model (TAWM), a model-agnostic and more efficient training method for world model. In this work, TAWM is built on top of TD-MPC2 world model architecture as the basis of the experiments. <br><br>
+## 📖 Introduction
+This is the official code for Time-Aware World Model (TAWM), a model-agnostic and more efficient training method for world model. <br>
 
-Since TAWM's core contribution is the time-aware training method, which is ***architecture-agnostic***, it can be incorporated into any world model training pipeline, including but is not limited to TD-MPC2 and Dreamers. <br><br>
+**TL;DR:** Time-Aware World Model (TAWM) is a model-agnostic training method that improves dynamics learning by explicitly incorporating time step size Δt and sampling observations at varying frequencies. This addresses the real-world constraint of varying observation rates, enabling efficient learning across temporal scales and outperforming fixed-Δt baselines under the same training budget.
+
+<br><br>
+
+Since TAWM's core contribution is the **time-aware concepts and training method**, which is ***architecture-agnostic***, it can be seemlessly incorporated into any world model training pipeline, including but not limited to TD-MPC2 and Dreamers. In this work, TAWM is built on top of TD-MPC2 architecture as the basis of the experiments. <br><br>
 
 You can directly incorporate the Time-Aware concept into your world model training pipeline ***even without using our code***. To incorporate **TAWM** into any world model architecture:
 
@@ -198,21 +203,46 @@ The original MTS3 is prediction-only world model and does not support evaluation
    python MTS3/experiments/basketball/mts3_exp.py
    ```
 
-## Contact
+## 📧 Contact
 If you have any question or suggestion about our work, please feel free to open an issue or contact us at anhu@umd.edu.
 
-## Citation
+## 📚 Citation
 If you find the insights and findings in our work useful, please consider citing our paper with the following BibTeX entry.
 
+<h3>📄 ArXiv</h3>
+
 ```BibTeX
-@inproceedings{
-   nhu2025timeaware,
-   title={Time-Aware World Model for Adaptive Prediction and Control},
-   author={Anh N Nhu and Sanghyun Son and Ming Lin},
-   booktitle={Forty-second International Conference on Machine Learning},
+@misc{nhu2025timeawareworldmodeladaptive,
+   title={Time-Aware World Model for Adaptive Prediction and Control}, 
+   author={Anh N. Nhu and Sanghyun Son and Ming Lin},
    year={2025},
-   url={https://openreview.net/forum?id=gZ5N3TLjwv}
+   eprint={2506.08441},
+   archivePrefix={arXiv},
+   primaryClass={cs.LG},
+   url={https://arxiv.org/abs/2506.08441}, 
 }
+```
+
+OR 
+
+<h3>🎓 ICML 2025</h3>
+
+```BibTeX
+@InProceedings{pmlr-v267-nhu25a,
+  title = 	 {Time-Aware World Model for Adaptive Prediction and Control},
+  author =       {Nhu, Anh N and Son, Sanghyun and Lin, Ming},
+  booktitle = 	 {Proceedings of the 42nd International Conference on Machine Learning},
+  pages = 	 {46265--46287},
+  year = 	 {2025},
+  editor = 	 {Singh, Aarti and Fazel, Maryam and Hsu, Daniel and Lacoste-Julien, Simon and Berkenkamp, Felix and Maharaj, Tegan and Wagstaff, Kiri and Zhu, Jerry},
+  volume = 	 {267},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--19 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v267/main/assets/nhu25a/nhu25a.pdf},
+  url = 	 {https://proceedings.mlr.press/v267/nhu25a.html},
+}
+
 ```
 
 We appreciate your interest in our work and hope that it is useful to your projects!
